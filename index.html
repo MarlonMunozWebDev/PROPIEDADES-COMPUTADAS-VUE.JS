@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      body {
+        background: #E5E7E9;;
+      }
+    </style>
+    <title>PROPIEDADES COMPUTADAS</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1 class="text-center mt-1">PROPIEDADES COMPUTADAS - VUE.JS</h1>
+      <div class="container bg-warning mt-5 p-5">
+        <h2 class="text-light">Verificador de Palindromo</h2>
+        <!-- IMPRIMIR UNA VARIABLE EN UN INPUT -->
+        <input type="text" class="form-control" v-model="mensaje">
+        <hr/>
+
+        <h4>Normal: {{mensaje}}</h4>
+
+        <h4 class="text-danger">Alreves: {{invertido}}</h4>
+
+      </div>
+      <hr>
+
+      <div  class="container mt-5 p-5 bg-light">
+        <!-- AGREGAMOS UN CONTADOR CON EL VENTO CLICK CON JS -->
+      <button class="btn btn-success" @click="contador++">+</button>
+      <button class="btn btn-danger" @click="contador--">-</button>
+      <p class="font-weight-bold">Progreso del curso</p>
+      <h3 class="text-primary">{{contador}}% Completado</h3>
+        
+      <div class="progress">
+          <!-- EL ANCHO VASER UN VALOR TRAIDO DESDE VUE :-->
+          <div class="progress-bar" role="progressbar" :style="{'width': contador+'%'}"
+          arial-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+  
+          :class="color">
+          <!-- ^ LA CLASE PARA EL COLOR LO PASAMOS DE ACUERDO A LA CONDICION DLE CONTADOR -->
+  
+  
+          {{contador}}%
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vue.js"> </script>
+  </body>
+</html>
